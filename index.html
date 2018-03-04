@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS-Tutorial</title>
+
+</head>
+<script src="vue.js"></script>
+
+<body>
+    <div id="execrise">
+        <p>VueJs is Cool - {{name}} ({{age}})</p>
+        <p>{{age*3}}</p>
+        <p>{{random()}}</p>
+        <p>{{counter}}</p>
+        <div>
+            <img v-bind:src="image" style="width:100px;height:100px">
+        </div>
+        <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+        <div>
+            <input type="text" v-bind:value="name">
+        </div>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#execrise',
+            data: {
+                name: 'shravan',
+                age: '25',
+                image: 'https://camo.githubusercontent.com/224f79940611c6c12fb649128eca1cae31086d23/687474707',
+                counter:0
+            },
+            methods: {
+                random: function () {
+                    return Math.random();
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
